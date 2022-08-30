@@ -80,9 +80,19 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-DATABASES = {
-    'default': config('DATABASE_URL', default=default_dburl, cast=dburl)
+# default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+# DATABASES = {
+#     'default': config('DATABASE_URL', default=default_dburl, cast=dburl)
+# }
+DATABASES={
+   'default':{
+      'ENGINE':'django.db.backends.postgresql_psycopg2',
+      'NAME':'d13ot5sot7ii1d',
+      'USER':'qfaooxglelxsmx',
+      'PASSWORD':'983aa98f2620bedd6418c78a8f39b8c404fb526ad56d72b8f5f816fbfc06208c',
+      'HOST':'ec2-44-209-186-51.compute-1.amazonaws.com',
+      'PORT':'5432',
+   }
 }
 
 
